@@ -11,6 +11,7 @@ namespace ISS.Location.API.Features
             CreateMap<IssLocationModel, IssLocation>();
             CreateMap<LocationApi, IssLocation>();
             CreateMap<LocationApi, IssLocationModel>();
+            CreateMap<IssLocationModel, LocationApi>();
 
         }
     }

@@ -16,11 +16,11 @@ namespace ISS.Location.API.Repositories
             _httpClient = httpClient;
         }
 
-        public Task<LocationApi> GetLocation()
+        public async Task<LocationApi> GetLocation()
         {
             var request = new HttpRequestMessage();
 
-            return HttpClientHelper.SendRequestAndGetResponseAsync<LocationApi>(_httpClient, request);
+            return await HttpClientHelper.SendRequestAndGetResponseAsync<LocationApi>(_httpClient, request);
         }
     }
 }

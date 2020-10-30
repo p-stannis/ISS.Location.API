@@ -36,7 +36,7 @@ namespace ISS.Location.API
 
             services.AddMediatR(AppDomain.CurrentDomain.Load("Iss.Location.API.Features"));
 
-            //services.ConfigureDatabase(Configuration);
+            services.ConfigureDatabase(Configuration);
 
             services.AddHttpClients(Configuration);
         }
@@ -60,7 +60,7 @@ namespace ISS.Location.API
                 endpoints.MapControllers();
             });
 
-            //app.InitializeDatabase();
+            app.InitializeDatabase();
         }
     }
 }

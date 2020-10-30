@@ -7,6 +7,7 @@ namespace ISS.Location.API.Entities
     {
         [JsonPropertyName("iss_position")]
         public IssPosition IssPosition { get; set; }
+        [JsonConverter(typeof(UnixDateTimeConverter))]
         public DateTime TimeStamp { get; set; }
     }
 

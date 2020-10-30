@@ -9,7 +9,7 @@ namespace ISS.Location.API.Extensions
     {
         public static void ConfigureAutoMapper(this IServiceCollection services)
         {
-            var assemblies = new List<Assembly> { Assembly.Load("Iss.Location.API.Features") };
+            var assemblies = new List<Assembly> { Assembly.Load("ISS.Location.API.Features") };
 
             services.AddAutoMapper(assemblies);
         }

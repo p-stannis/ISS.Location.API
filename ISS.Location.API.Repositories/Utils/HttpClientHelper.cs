@@ -27,9 +27,14 @@ namespace ISS.Location.API.Repositories.Utils
 
             response.EnsureSuccessStatusCode();
 
+            jsonOptions = new JsonSerializerOptions()
+            {
+                PropertyNameCaseInsensitive = true,
+                IgnoreNullValues = true
+            };
+
             using (var responseStream = await response.Content.ReadAsStreamAsync())
             {
-                var content = await new StreamReader(responseStream).ReadToEndAsync();
                 return await JsonSerializer.DeserializeAsync<T>(responseStream, jsonOptions);
             }
         }

@@ -22,11 +22,6 @@ namespace ISS.Location.API.Extensions
             {
                 client.BaseAddress = new Uri(config["Iss:BaseUrl"]);
                 client.DefaultRequestHeaders.Add("Accept", "application/json");
-            })
-            .ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler
-            {
-                AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate,
-                UseCookies = false
             });
         }
     }
