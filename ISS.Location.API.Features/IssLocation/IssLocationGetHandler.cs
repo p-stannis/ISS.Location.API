@@ -1,26 +1,24 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using ISS.Location.API.Contracts;
 using MediatR;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace ISS.Location.API.Features
 {
-    public class IssLocationGetHandler : IRequestHandler<IssLocationGetRequest,IssLocationModel>
+    public class IssLocationGetHandler : IRequestHandler<IssLocationGetRequest, IssLocationModel>
     {
         #region Properties
         private readonly IMapper _mapper;
         private readonly ILocationApiRepository _apiRepo;
-        //private readonly IRepositoryWrapper _repository;
-        
+
         #endregion
 
         #region Constructors
-        public IssLocationGetHandler(IMapper mapper, ILocationApiRepository apiRepo)
+        public IssLocationGetHandler(IMapper mapper, ILocationApiRepository apiRepo, IRepositoryWrapper repository)
         {
             _mapper = mapper;
             _apiRepo = apiRepo;
-            //_repository = repository;
         }
         #endregion
 

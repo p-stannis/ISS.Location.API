@@ -6,6 +6,6 @@ namespace ISS.Location.API.Contracts
 {
     public interface ILocationApiRepository
     {
-        Task<LocationApi> GetLocation();
+        Task<IssLocationApi> GetLocation();
     }
 }

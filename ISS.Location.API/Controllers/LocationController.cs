@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using ISS.Location.API.Features;
+﻿using ISS.Location.API.Features;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+using System.Threading.Tasks;
 
 namespace ISS.Location.API.Controllers
 {
@@ -25,6 +21,17 @@ namespace ISS.Location.API.Controllers
         public async Task<IssLocationModel> Get()
         {
             var request = new IssLocationGetRequest();
+
+            var result = await _mediator.Send(request);
+
+            return result;
+        }
+
+
+        [HttpPost]
+        public async Task<IssLocationModel> Create()
+        {
+            var request = new IssLocationCreateRequest();
 
             var result = await _mediator.Send(request);
 

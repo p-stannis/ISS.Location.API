@@ -1,17 +1,12 @@
-﻿using System;
-using System.Text.Json.Serialization;
+﻿using ISS.Location.API.Entities;
+using System;
 
 namespace ISS.Location.API.Features
 {
     public class IssLocationModel
     {
+        public int Id { get; set; }
         public IssPosition IssPosition { get; set; }
         public DateTime TimeStamp { get; set; }
-    }
-
-    public class IssPosition
-    {
-        public string Longitude { get; set; }
-        public string Latitude { get; set; }
     }
 }

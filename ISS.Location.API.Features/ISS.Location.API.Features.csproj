@@ -9,9 +9,6 @@
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="IssLocation\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\ISS.Location.API.Entities\ISS.Location.API.Entities.csproj" />
     <ProjectReference Include="..\ISS.Location.API.Repositories\ISS.Location.API.Repositories.csproj" />
   </ItemGroup>
